@@ -11,6 +11,7 @@ docs/benchmark-design.md              方法、矩阵、边界和验收标准
 docs/evidence.csv                     调研证据与固定提交
 scripts/                              上游准备、运行和摘要脚本
 results/                              版本化原始数据
+reports/                              人读性能结论与设备信息
 ```
 
 ## 环境
@@ -32,3 +33,5 @@ results/                              版本化原始数据
 快速模式只用于验证。需要提交或发布性能结论时必须使用完整模式，并保留生成的 JMH JSON、日志和 `environment.txt`。
 
 详细口径见 [性能测试设计](docs/benchmark-design.md)。
+
+当前本机完整结果见 [2026-09-03 性能报告](reports/2026-09-03-full.md)，原始数据位于 `results/20260903T141000Z/`。

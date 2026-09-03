@@ -6,6 +6,27 @@ agentic_source="${AGENTIC_SPRING_AI_SOURCE:-${benchmark_root}/../agentic-spring-
 mode="${1:-quick}"
 run_id="${RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)}"
 result_root="${benchmark_root}/results/${run_id}"
+user_home="${HOME:-}"
+
+record_hardware() {
+  if command -v system_profiler >/dev/null 2>&1; then
+    system_profiler SPHardwareDataType |
+      awk -F ': ' '/Model Name:|Model Identifier:|Model Number:|Chip:|Total Number of Cores:|Memory:/ {
+        key=$1; value=$2; gsub(/^[[:space:]]+|[[:space:]]+$/, "", key); gsub(/ /, "_", key);
+        print "hardware_" tolower(key) "=" value
+      }'
+  fi
+  if command -v sw_vers >/dev/null 2>&1; then
+    sw_vers | awk -F ':[[:space:]]*' '{ key=$1; value=$2; gsub(/ /, "_", key); print "os_" tolower(key) "=" value }'
+  fi
+}
+
+sanitize_result_file() {
+  local result_file="$1"
+  if [[ -n "${user_home}" ]]; then
+    BENCHMARK_USER_HOME="${user_home}" perl -pi -e 's/\Q$ENV{BENCHMARK_USER_HOME}\E/<HOME>/g' "${result_file}"
+  fi
+}
 
 case "${mode}" in
   quick)
@@ -30,7 +51,11 @@ mkdir -p "${result_root}/graph" "${result_root}/react"
   echo "started_at_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "benchmark_commit=$(git -C "${benchmark_root}" rev-parse HEAD 2>/dev/null || echo uncommitted)"
   echo "agentic_spring_ai_commit=$(git -C "${agentic_source}" rev-parse HEAD)"
-  echo "os=$(uname -a)"
+  echo "os=$(uname -srvmp)"
+  record_hardware
+  if command -v pmset >/dev/null 2>&1; then
+    echo "power_at_start=$(pmset -g batt | tr '\n' ' ')"
+  fi
   java -version
   mvn -version
 } >"${result_root}/environment.txt" 2>&1
@@ -45,5 +70,19 @@ java -jar "${benchmark_root}/react-benchmarks/agentic-spring-ai/target/benchmark
   "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/react/jmh.json" \
   >"${result_root}/react/jmh.log"
 
-echo "completed_at_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >>"${result_root}/environment.txt"
+for result_file in \
+  "${result_root}/environment.txt" \
+  "${result_root}/graph/jmh.json" \
+  "${result_root}/graph/jmh.log" \
+  "${result_root}/react/jmh.json" \
+  "${result_root}/react/jmh.log"; do
+  sanitize_result_file "${result_file}"
+done
+
+{
+  if command -v pmset >/dev/null 2>&1; then
+    echo "power_at_end=$(pmset -g batt | tr '\n' ' ')"
+  fi
+  echo "completed_at_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+} >>"${result_root}/environment.txt"
 echo "结果目录: ${result_root}"
