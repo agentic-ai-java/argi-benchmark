@@ -27,4 +27,18 @@ class GraphBenchmarkSmokeTest {
 			.orElseThrow().value("completed").orElseThrow()).intValue();
 		assertEquals(8, completed);
 	}
+
+	@Test
+	void developmentReferenceGraphsProduceExpectedState() throws Exception {
+		assertEquals(20, GraphBenchmarkSupport.value(
+			GraphBenchmarkSupport.sequentialWithStateWidth(20, 50),
+			io.github.agentic.spring.ai.graph.RunnableConfig.builder().build()));
+		assertEquals(4, GraphBenchmarkSupport.value(
+			GraphBenchmarkSupport.sequentialWorkload(4, 100),
+			io.github.agentic.spring.ai.graph.RunnableConfig.builder().build()));
+		int completed = ((Number) GraphBenchmarkSupport.parallelFanOut(4, 100)
+			.invoke(java.util.Map.of(), GraphBenchmarkSupport.parallelConfig())
+			.orElseThrow().value("completed").orElseThrow()).intValue();
+		assertEquals(4, completed);
+	}
 }

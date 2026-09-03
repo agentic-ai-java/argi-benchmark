@@ -12,6 +12,7 @@
 2. 图的冷路径 `compile()` 成本是多少？
 3. `MemorySaver` checkpoint 相对无 checkpoint 的成本是多少？
 4. ReAct 在排除网络和真实模型推理后，单模型回合和一次工具往返各引入多少框架开销？
+5. 日常开发常见的状态变宽、CPU 节点并行、长历史和 1/4/8 线程并发下，延迟、吞吐与分配量如何变化？
 
 所有热路径基准使用预构建对象。确定性 `ChatModel` 和本地工具均立即返回，避免网络抖动、限流和模型服务队列掩盖框架成本。
 
@@ -44,10 +45,17 @@ Google ADK Java 的 `TestLlm`/workflow 测试采用预设响应隔离真实模�
 | ReAct | 模型直调基线 | 单轮 | µs/op、bytes/op |
 | ReAct | ReactAgent 单模型回合 | 单轮 | µs/op、bytes/op、相对模型直调开销 |
 | ReAct | ReactAgent 工具往返 | 模型→工具→模型 | µs/op、bytes/op |
+| Graph reference | 状态宽度 | 5/20 节点 × 1/10/50 个额外状态键 | µs/op、bytes/op、相对直接 Map 基线 |
+| Graph reference | 串并行交叉点 | 4/8 分支 × 0/10k/100k CPU tokens | µs/op、并行相对串行 speedup |
+| Graph reference | 共享图吞吐 | 10 节点 × 1/4/8 threads | ops/s、bytes/op |
+| ReAct reference | 历史长度 | 0/5/25 轮历史 | µs/op、bytes/op |
+| ReAct reference | 共享 Agent 吞吐 | 1/4/8 threads | ops/s、bytes/op |
 
 ## 运行配置与验收
 
 快速模式为 2 次预热、3 次测量、1 fork、每次 500 ms，只用于代码验证和趋势快照。完整模式为 5 次预热、8 次测量、3 forks、每次 1 s，才可作为发布结论。
+
+`reference` 模式采用与完整模式相同的正式参数，但只运行面向日常框架开发的扩展矩阵。CPU tokens 使用 JMH `Blackhole.consumeCPU` 提供同机可重复的相对工作量，不代表固定微秒数，跨机器时必须重新测量交叉点。
 
 完整结果的质量门槛：
 

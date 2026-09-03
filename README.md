@@ -27,10 +27,11 @@ reports/                              人读性能结论与设备信息
 ./scripts/prepare-agentic-spring-ai.sh
 ./scripts/run-benchmarks.sh quick
 ./scripts/run-benchmarks.sh full
+./scripts/run-benchmarks.sh reference
 ./scripts/render-summary.sh results/<run-id>
 ```
 
-快速模式只用于验证。需要提交或发布性能结论时必须使用完整模式，并保留生成的 JMH JSON、日志和 `environment.txt`。
+快速模式只用于验证。完整模式运行全部场景；`reference` 使用相同的正式采样参数，专门运行状态宽度、并行交叉点、历史长度和多线程吞吐。需要提交或发布性能结论时必须保留生成的 JMH JSON、日志和 `environment.txt`。
 
 详细口径见 [性能测试设计](docs/benchmark-design.md)。
 

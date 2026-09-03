@@ -28,6 +28,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ForkJoinPool;
 
+import org.openjdk.jmh.infra.Blackhole;
+
 import static io.github.agentic.spring.ai.graph.StateGraph.END;
 import static io.github.agentic.spring.ai.graph.StateGraph.START;
 import static io.github.agentic.spring.ai.graph.action.AsyncEdgeAction.edge_async;
@@ -70,6 +72,10 @@ final class GraphBenchmarkSupport {
 	}
 
 	static CompiledGraph parallelFanOut(int branches) throws Exception {
+		return parallelFanOut(branches, 0);
+	}
+
+	static CompiledGraph parallelFanOut(int branches, long cpuTokens) throws Exception {
 		StateGraph graph = new StateGraph(() -> {
 			Map<String, KeyStrategy> strategies = new HashMap<>();
 			for (int i = 0; i < branches; i++) {
@@ -80,13 +86,58 @@ final class GraphBenchmarkSupport {
 		});
 		for (int i = 0; i < branches; i++) {
 			String branch = "branch_" + i;
-			graph.addNode(branch, node_async(state -> Map.of(branch, 1)))
+			graph.addNode(branch, node_async(state -> {
+				Blackhole.consumeCPU(cpuTokens);
+				return Map.of(branch, 1);
+			}))
 				.addEdge(START, branch)
 				.addEdge(branch, "merge");
 		}
 		graph.addNode("merge", node_async(state -> Map.of("completed", branches)))
 			.addEdge("merge", END);
 		return graph.compile(noCheckpointConfig(branches + 16));
+	}
+
+	static CompiledGraph sequentialWorkload(int nodes, long cpuTokens) throws Exception {
+		StateGraph graph = new StateGraph(GraphBenchmarkSupport::valueStrategy);
+		for (int i = 0; i < nodes; i++) {
+			String node = "work_" + i;
+			graph.addNode(node, node_async(state -> {
+				Blackhole.consumeCPU(cpuTokens);
+				return Map.of("value", ((Number) state.value("value").orElse(0)).intValue() + 1);
+			}));
+			graph.addEdge(i == 0 ? START : "work_" + (i - 1), node);
+		}
+		graph.addEdge("work_" + (nodes - 1), END);
+		return graph.compile(noCheckpointConfig(nodes + 16));
+	}
+
+	static CompiledGraph sequentialWithStateWidth(int nodeCount, int stateKeys) throws Exception {
+		StateGraph graph = new StateGraph(() -> {
+			Map<String, KeyStrategy> strategies = new HashMap<>();
+			strategies.put("value", new ReplaceStrategy());
+			for (int i = 0; i < stateKeys; i++) {
+				strategies.put("state_" + i, new ReplaceStrategy());
+			}
+			return strategies;
+		});
+		for (int i = 0; i < nodeCount; i++) {
+			String node = "wide_" + i;
+			graph.addNode(node, node_async(state ->
+				Map.of("value", ((Number) state.value("value").orElse(0)).intValue() + 1)));
+			graph.addEdge(i == 0 ? START : "wide_" + (i - 1), node);
+		}
+		graph.addEdge("wide_" + (nodeCount - 1), END);
+		return graph.compile(noCheckpointConfig(nodeCount + 16));
+	}
+
+	static Map<String, Object> inputWithStateWidth(int stateKeys) {
+		Map<String, Object> input = new HashMap<>();
+		input.put("value", 0);
+		for (int i = 0; i < stateKeys; i++) {
+			input.put("state_" + i, i);
+		}
+		return input;
 	}
 
 	static CompiledGraph withMemoryCheckpoint() throws Exception {

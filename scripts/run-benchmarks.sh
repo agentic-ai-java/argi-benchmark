@@ -32,13 +32,23 @@ case "${mode}" in
   quick)
     # 快速验证用于发现回归和生成非权威快照。
     jmh_options=(-wi 2 -i 3 -w 500ms -r 500ms -f 1)
+    graph_include='.*'
+    react_include='.*'
     ;;
   full)
     # 显式传参，避免不同 Bash 版本对空数组展开的行为差异。
     jmh_options=(-wi 5 -i 8 -w 1s -r 1s -f 3)
+    graph_include='.*'
+    react_include='.*'
+    ;;
+  reference)
+    # 日常开发参考矩阵：状态宽度、并行交叉点、历史长度和多线程吞吐。
+    jmh_options=(-wi 5 -i 8 -w 1s -r 1s -f 3)
+    graph_include='.*(StateWidthGraphBenchmark|ParallelCrossoverGraphBenchmark|GraphThroughputBenchmark).*'
+    react_include='.*(ReactHistoryBenchmark|ReactThroughputBenchmark).*'
     ;;
   *)
-    echo "用法: $0 [quick|full]" >&2
+    echo "用法: $0 [quick|full|reference]" >&2
     exit 2
     ;;
 esac
@@ -63,11 +73,11 @@ mkdir -p "${result_root}/graph" "${result_root}/react"
 mvn -B -q -f "${benchmark_root}/pom.xml" verify
 
 java -jar "${benchmark_root}/graph-benchmarks/agentic-spring-ai/target/benchmarks.jar" \
-  "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/graph/jmh.json" \
+  "${graph_include}" "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/graph/jmh.json" \
   >"${result_root}/graph/jmh.log"
 
 java -jar "${benchmark_root}/react-benchmarks/agentic-spring-ai/target/benchmarks.jar" \
-  "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/react/jmh.json" \
+  "${react_include}" "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/react/jmh.json" \
   >"${result_root}/react/jmh.log"
 
 for result_file in \
