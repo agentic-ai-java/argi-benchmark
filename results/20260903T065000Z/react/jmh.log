@@ -1,0 +1,1292 @@
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1
+
+# Run progress: 0.00% complete, ETA 00:03:54
+# Fork: 1 of 3
+# Warmup Iteration   1: 3181.269 ops/s
+# Warmup Iteration   2: 7225.367 ops/s
+# Warmup Iteration   3: 9104.612 ops/s
+# Warmup Iteration   4: 10260.122 ops/s
+# Warmup Iteration   5: 10302.261 ops/s
+Iteration   1: 9932.497 ops/s
+                 gc.alloc.rate:      3635.134 MB/sec
+                 gc.alloc.rate.norm: 383809.003 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 10487.989 ops/s
+                 gc.alloc.rate:      3838.200 MB/sec
+                 gc.alloc.rate.norm: 383808.568 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   3: 10365.422 ops/s
+                 gc.alloc.rate:      3793.262 MB/sec
+                 gc.alloc.rate.norm: 383808.573 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   4: 9814.607 ops/s
+                 gc.alloc.rate:      3592.026 MB/sec
+                 gc.alloc.rate.norm: 383808.599 B/op
+                 gc.count:           6.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   5: 9663.461 ops/s
+                 gc.alloc.rate:      3536.594 MB/sec
+                 gc.alloc.rate.norm: 383808.610 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   6: 10421.597 ops/s
+                 gc.alloc.rate:      3814.120 MB/sec
+                 gc.alloc.rate.norm: 383809.357 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 10472.786 ops/s
+                 gc.alloc.rate:      3832.813 MB/sec
+                 gc.alloc.rate.norm: 383808.573 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   8: 10513.756 ops/s
+                 gc.alloc.rate:      3847.825 MB/sec
+                 gc.alloc.rate.norm: 383808.564 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+
+# Run progress: 5.56% complete, ETA 00:05:15
+# Fork: 2 of 3
+# Warmup Iteration   1: 2556.369 ops/s
+# Warmup Iteration   2: 7472.724 ops/s
+# Warmup Iteration   3: 9286.158 ops/s
+# Warmup Iteration   4: 10502.391 ops/s
+# Warmup Iteration   5: 10477.049 ops/s
+Iteration   1: 10537.819 ops/s
+                 gc.alloc.rate:      3855.344 MB/sec
+                 gc.alloc.rate.norm: 383672.946 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 10396.999 ops/s
+                 gc.alloc.rate:      3803.816 MB/sec
+                 gc.alloc.rate.norm: 383672.564 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   3: 10590.513 ops/s
+                 gc.alloc.rate:      3874.650 MB/sec
+                 gc.alloc.rate.norm: 383672.554 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 10255.017 ops/s
+                 gc.alloc.rate:      3751.747 MB/sec
+                 gc.alloc.rate.norm: 383672.572 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   5: 10374.980 ops/s
+                 gc.alloc.rate:      3795.714 MB/sec
+                 gc.alloc.rate.norm: 383672.565 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   6: 9658.460 ops/s
+                 gc.alloc.rate:      3533.571 MB/sec
+                 gc.alloc.rate.norm: 383673.470 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 10304.174 ops/s
+                 gc.alloc.rate:      3769.872 MB/sec
+                 gc.alloc.rate.norm: 383672.569 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   8: 10332.760 ops/s
+                 gc.alloc.rate:      3780.150 MB/sec
+                 gc.alloc.rate.norm: 383672.574 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+
+# Run progress: 11.11% complete, ETA 00:04:56
+# Fork: 3 of 3
+# Warmup Iteration   1: 2991.333 ops/s
+# Warmup Iteration   2: 7426.113 ops/s
+# Warmup Iteration   3: 10044.538 ops/s
+# Warmup Iteration   4: 10668.502 ops/s
+# Warmup Iteration   5: 10653.131 ops/s
+Iteration   1: 10389.123 ops/s
+                 gc.alloc.rate:      3799.202 MB/sec
+                 gc.alloc.rate.norm: 383512.966 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 10678.354 ops/s
+                 gc.alloc.rate:      3905.150 MB/sec
+                 gc.alloc.rate.norm: 383512.555 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   3: 10699.405 ops/s
+                 gc.alloc.rate:      3912.676 MB/sec
+                 gc.alloc.rate.norm: 383512.554 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 10689.890 ops/s
+                 gc.alloc.rate:      3909.300 MB/sec
+                 gc.alloc.rate.norm: 383512.555 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 10742.011 ops/s
+                 gc.alloc.rate:      3928.358 MB/sec
+                 gc.alloc.rate.norm: 383512.552 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   6: 10732.505 ops/s
+                 gc.alloc.rate:      3924.916 MB/sec
+                 gc.alloc.rate.norm: 383513.323 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 10731.909 ops/s
+                 gc.alloc.rate:      3924.735 MB/sec
+                 gc.alloc.rate.norm: 383512.553 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   8: 10739.348 ops/s
+                 gc.alloc.rate:      3927.294 MB/sec
+                 gc.alloc.rate.norm: 383512.552 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1":
+  10396.891 ±(99.9%) 252.323 ops/s [Average]
+  (min, avg, max) = (9658.460, 10396.891, 10742.011), stdev = 328.091
+  CI (99.9%): [10144.568, 10649.214] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1:gc.alloc.rate":
+  3803.603 ±(99.9%) 91.756 MB/sec [Average]
+  (min, avg, max) = (3533.571, 3803.603, 3928.358), stdev = 119.309
+  CI (99.9%): [3711.846, 3895.359] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1:gc.alloc.rate.norm":
+  383664.720 ±(99.9%) 95.048 B/op [Average]
+  (min, avg, max) = (383512.552, 383664.720, 383809.357), stdev = 123.589
+  CI (99.9%): [383569.672, 383759.767] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1:gc.count":
+  172.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (6.000, 7.167, 8.000), stdev = 0.482
+  CI (99.9%): [172.000, 172.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads1:gc.time":
+  111.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (4.000, 4.625, 6.000), stdev = 0.576
+  CI (99.9%): [111.000, 111.000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4
+
+# Run progress: 16.67% complete, ETA 00:04:37
+# Fork: 1 of 3
+# Warmup Iteration   1: 3428.001 ops/s
+# Warmup Iteration   2: 12467.473 ops/s
+# Warmup Iteration   3: 24854.298 ops/s
+# Warmup Iteration   4: 28155.076 ops/s
+# Warmup Iteration   5: 29125.709 ops/s
+Iteration   1: 30140.372 ops/s
+                 gc.alloc.rate:      11071.226 MB/sec
+                 gc.alloc.rate.norm: 385275.941 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   2: 31055.362 ops/s
+                 gc.alloc.rate:      11402.874 MB/sec
+                 gc.alloc.rate.norm: 385276.145 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   3: 31124.137 ops/s
+                 gc.alloc.rate:      11432.707 MB/sec
+                 gc.alloc.rate.norm: 385276.053 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   4: 30811.014 ops/s
+                 gc.alloc.rate:      11317.154 MB/sec
+                 gc.alloc.rate.norm: 385276.394 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   5: 28659.133 ops/s
+                 gc.alloc.rate:      10525.389 MB/sec
+                 gc.alloc.rate.norm: 385275.656 B/op
+                 gc.count:           20.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   6: 27938.346 ops/s
+                 gc.alloc.rate:      10262.706 MB/sec
+                 gc.alloc.rate.norm: 385275.528 B/op
+                 gc.count:           19.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   7: 28699.427 ops/s
+                 gc.alloc.rate:      10542.231 MB/sec
+                 gc.alloc.rate.norm: 385275.581 B/op
+                 gc.count:           20.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   8: 27390.513 ops/s
+                 gc.alloc.rate:      10059.284 MB/sec
+                 gc.alloc.rate.norm: 385275.787 B/op
+                 gc.count:           19.000 counts
+                 gc.time:            11.000 ms
+
+
+# Run progress: 22.22% complete, ETA 00:04:19
+# Fork: 2 of 3
+# Warmup Iteration   1: 2979.952 ops/s
+# Warmup Iteration   2: 8033.853 ops/s
+# Warmup Iteration   3: 22688.865 ops/s
+# Warmup Iteration   4: 31306.195 ops/s
+# Warmup Iteration   5: 31388.399 ops/s
+Iteration   1: 30843.314 ops/s
+                 gc.alloc.rate:      11322.824 MB/sec
+                 gc.alloc.rate.norm: 385076.518 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   2: 31661.755 ops/s
+                 gc.alloc.rate:      11623.923 MB/sec
+                 gc.alloc.rate.norm: 385076.312 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   3: 30001.732 ops/s
+                 gc.alloc.rate:      11013.903 MB/sec
+                 gc.alloc.rate.norm: 385076.160 B/op
+                 gc.count:           20.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   4: 27861.234 ops/s
+                 gc.alloc.rate:      10228.201 MB/sec
+                 gc.alloc.rate.norm: 385076.752 B/op
+                 gc.count:           20.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   5: 31529.170 ops/s
+                 gc.alloc.rate:      11573.627 MB/sec
+                 gc.alloc.rate.norm: 385076.478 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   6: 31498.970 ops/s
+                 gc.alloc.rate:      11563.908 MB/sec
+                 gc.alloc.rate.norm: 385076.496 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   7: 31164.922 ops/s
+                 gc.alloc.rate:      11442.146 MB/sec
+                 gc.alloc.rate.norm: 385076.309 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   8: 31390.969 ops/s
+                 gc.alloc.rate:      11510.699 MB/sec
+                 gc.alloc.rate.norm: 385076.443 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            13.000 ms
+
+
+# Run progress: 27.78% complete, ETA 00:04:00
+# Fork: 3 of 3
+# Warmup Iteration   1: 4785.758 ops/s
+# Warmup Iteration   2: 17364.888 ops/s
+# Warmup Iteration   3: 31361.623 ops/s
+# Warmup Iteration   4: 31648.840 ops/s
+# Warmup Iteration   5: 31822.747 ops/s
+Iteration   1: 28303.038 ops/s
+                 gc.alloc.rate:      10341.532 MB/sec
+                 gc.alloc.rate.norm: 383229.100 B/op
+                 gc.count:           19.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   2: 31752.411 ops/s
+                 gc.alloc.rate:      11601.375 MB/sec
+                 gc.alloc.rate.norm: 383229.913 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   3: 32006.215 ops/s
+                 gc.alloc.rate:      11693.377 MB/sec
+                 gc.alloc.rate.norm: 383230.544 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   4: 32037.100 ops/s
+                 gc.alloc.rate:      11705.207 MB/sec
+                 gc.alloc.rate.norm: 383229.973 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   5: 31927.897 ops/s
+                 gc.alloc.rate:      11665.983 MB/sec
+                 gc.alloc.rate.norm: 383229.598 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   6: 32023.754 ops/s
+                 gc.alloc.rate:      11700.828 MB/sec
+                 gc.alloc.rate.norm: 383229.880 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            13.000 ms
+
+Iteration   7: 32048.964 ops/s
+                 gc.alloc.rate:      11709.635 MB/sec
+                 gc.alloc.rate.norm: 383229.875 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            14.000 ms
+
+Iteration   8: 31998.206 ops/s
+                 gc.alloc.rate:      11677.458 MB/sec
+                 gc.alloc.rate.norm: 383229.754 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            12.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4":
+  30577.831 ±(99.9%) 1196.206 ops/s [Average]
+  (min, avg, max) = (27390.513, 30577.831, 32048.964), stdev = 1555.406
+  CI (99.9%): [29381.625, 31774.038] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4:gc.alloc.rate":
+  11207.842 ±(99.9%) 428.648 MB/sec [Average]
+  (min, avg, max) = (10059.284, 11207.842, 11709.635), stdev = 557.364
+  CI (99.9%): [10779.193, 11636.490] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4:gc.alloc.rate.norm":
+  384527.383 ±(99.9%) 723.632 B/op [Average]
+  (min, avg, max) = (383229.100, 384527.383, 385276.394), stdev = 940.926
+  CI (99.9%): [383803.751, 385251.015] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4:gc.count":
+  506.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (19.000, 21.083, 22.000), stdev = 1.100
+  CI (99.9%): [506.000, 506.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads4:gc.time":
+  304.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (11.000, 12.667, 14.000), stdev = 0.637
+  CI (99.9%): [304.000, 304.000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8
+
+# Run progress: 33.33% complete, ETA 00:03:42
+# Fork: 1 of 3
+# Warmup Iteration   1: 4157.825 ops/s
+# Warmup Iteration   2: 12654.321 ops/s
+# Warmup Iteration   3: 35952.601 ops/s
+# Warmup Iteration   4: 41462.568 ops/s
+# Warmup Iteration   5: 41839.084 ops/s
+Iteration   1: 42100.415 ops/s
+                 gc.alloc.rate:      15384.863 MB/sec
+                 gc.alloc.rate.norm: 383416.558 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   2: 41714.678 ops/s
+                 gc.alloc.rate:      15245.993 MB/sec
+                 gc.alloc.rate.norm: 383416.159 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            16.000 ms
+
+Iteration   3: 42137.558 ops/s
+                 gc.alloc.rate:      15400.117 MB/sec
+                 gc.alloc.rate.norm: 383415.988 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            16.000 ms
+
+Iteration   4: 36752.119 ops/s
+                 gc.alloc.rate:      13428.793 MB/sec
+                 gc.alloc.rate.norm: 383413.138 B/op
+                 gc.count:           21.000 counts
+                 gc.time:            14.000 ms
+
+Iteration   5: 40797.814 ops/s
+                 gc.alloc.rate:      14893.811 MB/sec
+                 gc.alloc.rate.norm: 383415.908 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            18.000 ms
+
+Iteration   6: 41877.157 ops/s
+                 gc.alloc.rate:      15305.583 MB/sec
+                 gc.alloc.rate.norm: 383415.994 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            18.000 ms
+
+Iteration   7: 42161.053 ops/s
+                 gc.alloc.rate:      15405.810 MB/sec
+                 gc.alloc.rate.norm: 383417.055 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   8: 42314.331 ops/s
+                 gc.alloc.rate:      15465.376 MB/sec
+                 gc.alloc.rate.norm: 383415.611 B/op
+                 gc.count:           24.000 counts
+                 gc.time:            15.000 ms
+
+
+# Run progress: 38.89% complete, ETA 00:03:23
+# Fork: 2 of 3
+# Warmup Iteration   1: 4485.685 ops/s
+# Warmup Iteration   2: 14282.749 ops/s
+# Warmup Iteration   3: 36520.392 ops/s
+# Warmup Iteration   4: 40931.082 ops/s
+# Warmup Iteration   5: 43566.723 ops/s
+Iteration   1: 43337.630 ops/s
+                 gc.alloc.rate:      15847.723 MB/sec
+                 gc.alloc.rate.norm: 383607.555 B/op
+                 gc.count:           25.000 counts
+                 gc.time:            16.000 ms
+
+Iteration   2: 40295.576 ops/s
+                 gc.alloc.rate:      14731.821 MB/sec
+                 gc.alloc.rate.norm: 383607.044 B/op
+                 gc.count:           23.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   3: 38176.649 ops/s
+                 gc.alloc.rate:      13953.436 MB/sec
+                 gc.alloc.rate.norm: 383605.398 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   4: 41077.628 ops/s
+                 gc.alloc.rate:      15019.910 MB/sec
+                 gc.alloc.rate.norm: 383606.414 B/op
+                 gc.count:           23.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   5: 38670.425 ops/s
+                 gc.alloc.rate:      14138.524 MB/sec
+                 gc.alloc.rate.norm: 383605.486 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            14.000 ms
+
+Iteration   6: 41008.360 ops/s
+                 gc.alloc.rate:      14994.858 MB/sec
+                 gc.alloc.rate.norm: 383606.473 B/op
+                 gc.count:           23.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   7: 42222.682 ops/s
+                 gc.alloc.rate:      15428.940 MB/sec
+                 gc.alloc.rate.norm: 383607.747 B/op
+                 gc.count:           25.000 counts
+                 gc.time:            16.000 ms
+
+Iteration   8: 39872.093 ops/s
+                 gc.alloc.rate:      14580.633 MB/sec
+                 gc.alloc.rate.norm: 383605.565 B/op
+                 gc.count:           22.000 counts
+                 gc.time:            14.000 ms
+
+
+# Run progress: 44.44% complete, ETA 00:03:05
+# Fork: 3 of 3
+# Warmup Iteration   1: 4010.349 ops/s
+# Warmup Iteration   2: 13857.009 ops/s
+# Warmup Iteration   3: 36539.524 ops/s
+# Warmup Iteration   4: 40803.228 ops/s
+# Warmup Iteration   5: 40995.251 ops/s
+Iteration   1: 41314.364 ops/s
+                 gc.alloc.rate:      15082.087 MB/sec
+                 gc.alloc.rate.norm: 383016.469 B/op
+                 gc.count:           23.000 counts
+                 gc.time:            15.000 ms
+
+Iteration   2: 40560.555 ops/s
+                 gc.alloc.rate:      14804.106 MB/sec
+                 gc.alloc.rate.norm: 383016.944 B/op
+                 gc.count:           23.000 counts
+                 gc.time:            14.000 ms
+
+Iteration   3: 19988.133 ops/s
+                 gc.alloc.rate:      7286.390 MB/sec
+                 gc.alloc.rate.norm: 383004.272 B/op
+                 gc.count:           12.000 counts
+                 gc.time:            22.000 ms
+
+Iteration   4: 18447.984 ops/s
+                 gc.alloc.rate:      6710.668 MB/sec
+                 gc.alloc.rate.norm: 383002.767 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            35.000 ms
+
+Iteration   5: 19608.514 ops/s
+                 gc.alloc.rate:      7142.555 MB/sec
+                 gc.alloc.rate.norm: 383005.942 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            19.000 ms
+
+Iteration   6: 18751.650 ops/s
+                 gc.alloc.rate:      6832.421 MB/sec
+                 gc.alloc.rate.norm: 383001.518 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            12.000 ms
+
+Iteration   7: 28111.159 ops/s
+                 gc.alloc.rate:      10257.310 MB/sec
+                 gc.alloc.rate.norm: 383009.650 B/op
+                 gc.count:           11.000 counts
+                 gc.time:            9.000 ms
+
+Iteration   8: 37777.754 ops/s
+                 gc.alloc.rate:      13792.953 MB/sec
+                 gc.alloc.rate.norm: 383013.239 B/op
+                 gc.count:           15.000 counts
+                 gc.time:            10.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8":
+  36628.178 ±(99.9%) 6549.016 ops/s [Average]
+  (min, avg, max) = (18447.984, 36628.178, 43337.630), stdev = 8515.572
+  CI (99.9%): [30079.162, 43177.195] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8:gc.alloc.rate":
+  13380.612 ±(99.9%) 2400.224 MB/sec [Average]
+  (min, avg, max) = (6710.668, 13380.612, 15847.723), stdev = 3120.969
+  CI (99.9%): [10980.388, 15780.836] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8:gc.alloc.rate.norm":
+  383343.704 ±(99.9%) 195.825 B/op [Average]
+  (min, avg, max) = (383001.518, 383343.704, 383607.747), stdev = 254.627
+  CI (99.9%): [383147.879, 383539.528] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8:gc.count":
+  482.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (7.000, 20.083, 25.000), stdev = 5.985
+  CI (99.9%): [482.000, 482.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactThroughputBenchmark.threads8:gc.time":
+  383.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (9.000, 15.958, 35.000), stdev = 4.841
+  CI (99.9%): [383.000, 383.000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call
+# Parameters: (historyPairs = 0)
+
+# Run progress: 50.00% complete, ETA 00:02:46
+# Fork: 1 of 3
+# Warmup Iteration   1: 386.461 us/op
+# Warmup Iteration   2: 128.563 us/op
+# Warmup Iteration   3: 101.921 us/op
+# Warmup Iteration   4: 96.546 us/op
+# Warmup Iteration   5: 96.339 us/op
+Iteration   1: 96.315 us/op
+                 gc.alloc.rate:      3808.220 MB/sec
+                 gc.alloc.rate.norm: 384656.965 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   2: 96.117 us/op
+                 gc.alloc.rate:      3816.159 MB/sec
+                 gc.alloc.rate.norm: 384656.572 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   3: 96.082 us/op
+                 gc.alloc.rate:      3817.544 MB/sec
+                 gc.alloc.rate.norm: 384656.570 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 95.600 us/op
+                 gc.alloc.rate:      3836.655 MB/sec
+                 gc.alloc.rate.norm: 384656.568 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   5: 95.461 us/op
+                 gc.alloc.rate:      3842.405 MB/sec
+                 gc.alloc.rate.norm: 384656.560 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   6: 95.428 us/op
+                 gc.alloc.rate:      3843.769 MB/sec
+                 gc.alloc.rate.norm: 384657.355 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 95.547 us/op
+                 gc.alloc.rate:      3838.899 MB/sec
+                 gc.alloc.rate.norm: 384656.567 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   8: 95.301 us/op
+                 gc.alloc.rate:      3848.852 MB/sec
+                 gc.alloc.rate.norm: 384656.565 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+
+# Run progress: 55.56% complete, ETA 00:02:27
+# Fork: 2 of 3
+# Warmup Iteration   1: 375.552 us/op
+# Warmup Iteration   2: 129.384 us/op
+# Warmup Iteration   3: 97.405 us/op
+# Warmup Iteration   4: 94.508 us/op
+# Warmup Iteration   5: 94.520 us/op
+Iteration   1: 94.293 us/op
+                 gc.alloc.rate:      3877.454 MB/sec
+                 gc.alloc.rate.norm: 383440.949 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   2: 94.942 us/op
+                 gc.alloc.rate:      3851.201 MB/sec
+                 gc.alloc.rate.norm: 383448.691 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   3: 94.069 us/op
+                 gc.alloc.rate:      3886.811 MB/sec
+                 gc.alloc.rate.norm: 383440.558 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 99.609 us/op
+                 gc.alloc.rate:      3670.783 MB/sec
+                 gc.alloc.rate.norm: 383440.585 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 93.728 us/op
+                 gc.alloc.rate:      3900.973 MB/sec
+                 gc.alloc.rate.norm: 383440.556 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   6: 94.462 us/op
+                 gc.alloc.rate:      3870.663 MB/sec
+                 gc.alloc.rate.norm: 383441.341 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 93.962 us/op
+                 gc.alloc.rate:      3891.361 MB/sec
+                 gc.alloc.rate.norm: 383440.560 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   8: 93.671 us/op
+                 gc.alloc.rate:      3903.438 MB/sec
+                 gc.alloc.rate.norm: 383440.552 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+
+# Run progress: 61.11% complete, ETA 00:02:09
+# Fork: 3 of 3
+# Warmup Iteration   1: 372.620 us/op
+# Warmup Iteration   2: 130.623 us/op
+# Warmup Iteration   3: 102.593 us/op
+# Warmup Iteration   4: 98.893 us/op
+# Warmup Iteration   5: 98.214 us/op
+Iteration   1: 97.912 us/op
+                 gc.alloc.rate:      3746.235 MB/sec
+                 gc.alloc.rate.norm: 384664.981 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 97.961 us/op
+                 gc.alloc.rate:      3744.007 MB/sec
+                 gc.alloc.rate.norm: 384664.577 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   3: 98.054 us/op
+                 gc.alloc.rate:      3740.968 MB/sec
+                 gc.alloc.rate.norm: 384671.232 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   4: 97.737 us/op
+                 gc.alloc.rate:      3752.903 MB/sec
+                 gc.alloc.rate.norm: 384664.580 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   5: 97.718 us/op
+                 gc.alloc.rate:      3753.775 MB/sec
+                 gc.alloc.rate.norm: 384664.574 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   6: 108.521 us/op
+                 gc.alloc.rate:      3380.013 MB/sec
+                 gc.alloc.rate.norm: 384665.530 B/op
+                 gc.count:           6.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   7: 97.576 us/op
+                 gc.alloc.rate:      3759.207 MB/sec
+                 gc.alloc.rate.norm: 384664.582 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            4.000 ms
+
+Iteration   8: 97.455 us/op
+                 gc.alloc.rate:      3763.793 MB/sec
+                 gc.alloc.rate.norm: 384664.578 B/op
+                 gc.count:           7.000 counts
+                 gc.time:            5.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call":
+  96.563 ±(99.9%) 2.329 us/op [Average]
+  (min, avg, max) = (93.671, 96.563, 108.521), stdev = 3.028
+  CI (99.9%): [94.234, 98.892] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate":
+  3797.754 ±(99.9%) 83.294 MB/sec [Average]
+  (min, avg, max) = (3380.013, 3797.754, 3903.438), stdev = 108.305
+  CI (99.9%): [3714.460, 3881.047] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate.norm":
+  384254.673 ±(99.9%) 451.610 B/op [Average]
+  (min, avg, max) = (383440.552, 384254.673, 384671.232), stdev = 587.220
+  CI (99.9%): [383803.063, 384706.283] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.count":
+  184.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (6.000, 7.667, 9.000), stdev = 0.917
+  CI (99.9%): [184.000, 184.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.time":
+  112.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (4.000, 4.667, 6.000), stdev = 0.637
+  CI (99.9%): [112.000, 112.000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call
+# Parameters: (historyPairs = 5)
+
+# Run progress: 66.67% complete, ETA 00:01:50
+# Fork: 1 of 3
+# Warmup Iteration   1: 1532.689 us/op
+# Warmup Iteration   2: 594.528 us/op
+# Warmup Iteration   3: 508.913 us/op
+# Warmup Iteration   4: 500.601 us/op
+# Warmup Iteration   5: 495.720 us/op
+Iteration   1: 489.571 us/op
+                 gc.alloc.rate:      4514.791 MB/sec
+                 gc.alloc.rate.norm: 2317962.828 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 484.265 us/op
+                 gc.alloc.rate:      4563.250 MB/sec
+                 gc.alloc.rate.norm: 2317454.115 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   3: 477.754 us/op
+                 gc.alloc.rate:      4625.148 MB/sec
+                 gc.alloc.rate.norm: 2317251.316 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 477.113 us/op
+                 gc.alloc.rate:      4631.360 MB/sec
+                 gc.alloc.rate.norm: 2317250.798 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   5: 477.954 us/op
+                 gc.alloc.rate:      4622.947 MB/sec
+                 gc.alloc.rate.norm: 2317250.802 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   6: 476.798 us/op
+                 gc.alloc.rate:      4634.344 MB/sec
+                 gc.alloc.rate.norm: 2317250.812 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 476.915 us/op
+                 gc.alloc.rate:      4633.198 MB/sec
+                 gc.alloc.rate.norm: 2317251.806 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   8: 476.138 us/op
+                 gc.alloc.rate:      4640.847 MB/sec
+                 gc.alloc.rate.norm: 2317250.825 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+
+# Run progress: 72.22% complete, ETA 00:01:32
+# Fork: 2 of 3
+# Warmup Iteration   1: 1491.837 us/op
+# Warmup Iteration   2: 601.933 us/op
+# Warmup Iteration   3: 521.819 us/op
+# Warmup Iteration   4: 510.321 us/op
+# Warmup Iteration   5: 508.263 us/op
+Iteration   1: 505.387 us/op
+                 gc.alloc.rate:      4409.676 MB/sec
+                 gc.alloc.rate.norm: 2337056.286 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   2: 499.224 us/op
+                 gc.alloc.rate:      4462.553 MB/sec
+                 gc.alloc.rate.norm: 2336423.217 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   3: 490.942 us/op
+                 gc.alloc.rate:      4537.523 MB/sec
+                 gc.alloc.rate.norm: 2336155.451 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   4: 490.328 us/op
+                 gc.alloc.rate:      4543.125 MB/sec
+                 gc.alloc.rate.norm: 2336154.933 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 490.802 us/op
+                 gc.alloc.rate:      4538.845 MB/sec
+                 gc.alloc.rate.norm: 2336154.885 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   6: 490.094 us/op
+                 gc.alloc.rate:      4545.323 MB/sec
+                 gc.alloc.rate.norm: 2336154.906 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 491.221 us/op
+                 gc.alloc.rate:      4534.967 MB/sec
+                 gc.alloc.rate.norm: 2336155.939 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   8: 490.317 us/op
+                 gc.alloc.rate:      4543.392 MB/sec
+                 gc.alloc.rate.norm: 2336154.892 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            6.000 ms
+
+
+# Run progress: 77.78% complete, ETA 00:01:13
+# Fork: 3 of 3
+# Warmup Iteration   1: 1476.346 us/op
+# Warmup Iteration   2: 595.882 us/op
+# Warmup Iteration   3: 517.932 us/op
+# Warmup Iteration   4: 504.556 us/op
+# Warmup Iteration   5: 498.930 us/op
+Iteration   1: 496.178 us/op
+                 gc.alloc.rate:      4453.692 MB/sec
+                 gc.alloc.rate.norm: 2317388.750 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 491.547 us/op
+                 gc.alloc.rate:      4494.907 MB/sec
+                 gc.alloc.rate.norm: 2317034.965 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   3: 485.758 us/op
+                 gc.alloc.rate:      4547.672 MB/sec
+                 gc.alloc.rate.norm: 2316667.134 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   4: 482.889 us/op
+                 gc.alloc.rate:      4574.448 MB/sec
+                 gc.alloc.rate.norm: 2316610.863 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 482.803 us/op
+                 gc.alloc.rate:      4575.320 MB/sec
+                 gc.alloc.rate.norm: 2316610.839 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   6: 482.506 us/op
+                 gc.alloc.rate:      4577.849 MB/sec
+                 gc.alloc.rate.norm: 2316610.829 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   7: 482.919 us/op
+                 gc.alloc.rate:      4574.167 MB/sec
+                 gc.alloc.rate.norm: 2316611.869 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   8: 482.752 us/op
+                 gc.alloc.rate:      4575.421 MB/sec
+                 gc.alloc.rate.norm: 2316610.833 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call":
+  486.341 ±(99.9%) 5.904 us/op [Average]
+  (min, avg, max) = (476.138, 486.341, 505.387), stdev = 7.676
+  CI (99.9%): [480.437, 492.244] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate":
+  4556.449 ±(99.9%) 46.425 MB/sec [Average]
+  (min, avg, max) = (4409.676, 4556.449, 4640.847), stdev = 60.365
+  CI (99.9%): [4510.024, 4602.873] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate.norm":
+  2323478.329 ±(99.9%) 7128.973 B/op [Average]
+  (min, avg, max) = (2316610.829, 2323478.329, 2337056.286), stdev = 9269.679
+  CI (99.9%): [2316349.356, 2330607.301] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.count":
+  205.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (8.000, 8.542, 9.000), stdev = 0.509
+  CI (99.9%): [205.000, 205.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.time":
+  132.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (5.000, 5.500, 6.000), stdev = 0.511
+  CI (99.9%): [132.000, 132.000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.19, OpenJDK 64-Bit Server VM, 17.0.19+10-LTS
+# VM invoker: <HOME>/.local/share/mise/installs/java/zulu-17.66.19.0/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 8 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call
+# Parameters: (historyPairs = 25)
+
+# Run progress: 83.33% complete, ETA 00:00:55
+# Fork: 1 of 3
+# Warmup Iteration   1: 6394.523 us/op
+# Warmup Iteration   2: 2441.449 us/op
+# Warmup Iteration   3: 2224.262 us/op
+# Warmup Iteration   4: 2146.540 us/op
+# Warmup Iteration   5: 2104.005 us/op
+Iteration   1: 2087.435 us/op
+                 gc.alloc.rate:      4585.767 MB/sec
+                 gc.alloc.rate.norm: 10038631.467 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 2080.511 us/op
+                 gc.alloc.rate:      4600.478 MB/sec
+                 gc.alloc.rate.norm: 10038195.736 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   3: 2070.172 us/op
+                 gc.alloc.rate:      4623.780 MB/sec
+                 gc.alloc.rate.norm: 10038078.354 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   4: 2065.491 us/op
+                 gc.alloc.rate:      4634.161 MB/sec
+                 gc.alloc.rate.norm: 10038076.830 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 2058.516 us/op
+                 gc.alloc.rate:      4649.970 MB/sec
+                 gc.alloc.rate.norm: 10038025.194 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   6: 2051.084 us/op
+                 gc.alloc.rate:      4666.599 MB/sec
+                 gc.alloc.rate.norm: 10037887.723 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   7: 2051.223 us/op
+                 gc.alloc.rate:      4666.351 MB/sec
+                 gc.alloc.rate.norm: 10037887.673 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   8: 2049.660 us/op
+                 gc.alloc.rate:      4669.877 MB/sec
+                 gc.alloc.rate.norm: 10037798.990 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+
+# Run progress: 88.89% complete, ETA 00:00:36
+# Fork: 2 of 3
+# Warmup Iteration   1: 6248.351 us/op
+# Warmup Iteration   2: 2419.443 us/op
+# Warmup Iteration   3: 2220.711 us/op
+# Warmup Iteration   4: 2123.185 us/op
+# Warmup Iteration   5: 2086.112 us/op
+Iteration   1: 2064.305 us/op
+                 gc.alloc.rate:      4636.926 MB/sec
+                 gc.alloc.rate.norm: 10038097.101 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 2058.944 us/op
+                 gc.alloc.rate:      4648.732 MB/sec
+                 gc.alloc.rate.norm: 10037772.803 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   3: 2038.487 us/op
+                 gc.alloc.rate:      4695.432 MB/sec
+                 gc.alloc.rate.norm: 10037664.081 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   4: 2031.191 us/op
+                 gc.alloc.rate:      4712.361 MB/sec
+                 gc.alloc.rate.norm: 10037594.844 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   5: 2031.228 us/op
+                 gc.alloc.rate:      4712.271 MB/sec
+                 gc.alloc.rate.norm: 10037563.375 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   6: 2023.902 us/op
+                 gc.alloc.rate:      4729.115 MB/sec
+                 gc.alloc.rate.norm: 10037443.992 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   7: 2033.694 us/op
+                 gc.alloc.rate:      4706.428 MB/sec
+                 gc.alloc.rate.norm: 10037444.687 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   8: 2027.977 us/op
+                 gc.alloc.rate:      4719.595 MB/sec
+                 gc.alloc.rate.norm: 10037348.661 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+
+# Run progress: 94.44% complete, ETA 00:00:18
+# Fork: 3 of 3
+# Warmup Iteration   1: 6036.171 us/op
+# Warmup Iteration   2: 2434.424 us/op
+# Warmup Iteration   3: 2250.143 us/op
+# Warmup Iteration   4: 2156.279 us/op
+# Warmup Iteration   5: 2129.310 us/op
+Iteration   1: 2101.018 us/op
+                 gc.alloc.rate:      4555.814 MB/sec
+                 gc.alloc.rate.norm: 10038129.774 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   2: 2102.543 us/op
+                 gc.alloc.rate:      4552.469 MB/sec
+                 gc.alloc.rate.norm: 10037965.812 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   3: 2072.423 us/op
+                 gc.alloc.rate:      4618.365 MB/sec
+                 gc.alloc.rate.norm: 10037846.515 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   4: 2069.116 us/op
+                 gc.alloc.rate:      4626.105 MB/sec
+                 gc.alloc.rate.norm: 10037844.494 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   5: 2071.552 us/op
+                 gc.alloc.rate:      4620.299 MB/sec
+                 gc.alloc.rate.norm: 10037799.473 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   6: 2065.713 us/op
+                 gc.alloc.rate:      4633.482 MB/sec
+                 gc.alloc.rate.norm: 10037658.382 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+Iteration   7: 2067.352 us/op
+                 gc.alloc.rate:      4629.789 MB/sec
+                 gc.alloc.rate.norm: 10037653.597 B/op
+                 gc.count:           8.000 counts
+                 gc.time:            5.000 ms
+
+Iteration   8: 2061.952 us/op
+                 gc.alloc.rate:      4642.026 MB/sec
+                 gc.alloc.rate.norm: 10037624.361 B/op
+                 gc.count:           9.000 counts
+                 gc.time:            6.000 ms
+
+
+
+Result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call":
+  2059.812 ±(99.9%) 16.577 us/op [Average]
+  (min, avg, max) = (2023.902, 2059.812, 2102.543), stdev = 21.555
+  CI (99.9%): [2043.235, 2076.389] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate":
+  4647.341 ±(99.9%) 37.319 MB/sec [Average]
+  (min, avg, max) = (4552.469, 4647.341, 4729.115), stdev = 48.525
+  CI (99.9%): [4610.023, 4684.660] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.alloc.rate.norm":
+  10037834.747 ±(99.9%) 221.865 B/op [Average]
+  (min, avg, max) = (10037348.661, 10037834.747, 10038631.467), stdev = 288.487
+  CI (99.9%): [10037612.882, 10038056.611] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.count":
+  209.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (8.000, 8.708, 9.000), stdev = 0.464
+  CI (99.9%): [209.000, 209.000] (assumes normal distribution)
+
+Secondary result "io.github.agentic.spring.ai.benchmark.react.ReactHistoryBenchmark.call:gc.time":
+  133.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (5.000, 5.542, 6.000), stdev = 0.509
+  CI (99.9%): [133.000, 133.000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:05:32
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                             (historyPairs)   Mode  Cnt         Score      Error   Units
+ReactThroughputBenchmark.threads1                                N/A  thrpt   24     10396.891 ±  252.323   ops/s
+ReactThroughputBenchmark.threads1:gc.alloc.rate                  N/A  thrpt   24      3803.603 ±   91.756  MB/sec
+ReactThroughputBenchmark.threads1:gc.alloc.rate.norm             N/A  thrpt   24    383664.720 ±   95.048    B/op
+ReactThroughputBenchmark.threads1:gc.count                       N/A  thrpt   24       172.000             counts
+ReactThroughputBenchmark.threads1:gc.time                        N/A  thrpt   24       111.000                 ms
+ReactThroughputBenchmark.threads4                                N/A  thrpt   24     30577.831 ± 1196.206   ops/s
+ReactThroughputBenchmark.threads4:gc.alloc.rate                  N/A  thrpt   24     11207.842 ±  428.648  MB/sec
+ReactThroughputBenchmark.threads4:gc.alloc.rate.norm             N/A  thrpt   24    384527.383 ±  723.632    B/op
+ReactThroughputBenchmark.threads4:gc.count                       N/A  thrpt   24       506.000             counts
+ReactThroughputBenchmark.threads4:gc.time                        N/A  thrpt   24       304.000                 ms
+ReactThroughputBenchmark.threads8                                N/A  thrpt   24     36628.178 ± 6549.016   ops/s
+ReactThroughputBenchmark.threads8:gc.alloc.rate                  N/A  thrpt   24     13380.612 ± 2400.224  MB/sec
+ReactThroughputBenchmark.threads8:gc.alloc.rate.norm             N/A  thrpt   24    383343.704 ±  195.825    B/op
+ReactThroughputBenchmark.threads8:gc.count                       N/A  thrpt   24       482.000             counts
+ReactThroughputBenchmark.threads8:gc.time                        N/A  thrpt   24       383.000                 ms
+ReactHistoryBenchmark.call                                         0   avgt   24        96.563 ±    2.329   us/op
+ReactHistoryBenchmark.call:gc.alloc.rate                           0   avgt   24      3797.754 ±   83.294  MB/sec
+ReactHistoryBenchmark.call:gc.alloc.rate.norm                      0   avgt   24    384254.673 ±  451.610    B/op
+ReactHistoryBenchmark.call:gc.count                                0   avgt   24       184.000             counts
+ReactHistoryBenchmark.call:gc.time                                 0   avgt   24       112.000                 ms
+ReactHistoryBenchmark.call                                         5   avgt   24       486.341 ±    5.904   us/op
+ReactHistoryBenchmark.call:gc.alloc.rate                           5   avgt   24      4556.449 ±   46.425  MB/sec
+ReactHistoryBenchmark.call:gc.alloc.rate.norm                      5   avgt   24   2323478.329 ± 7128.973    B/op
+ReactHistoryBenchmark.call:gc.count                                5   avgt   24       205.000             counts
+ReactHistoryBenchmark.call:gc.time                                 5   avgt   24       132.000                 ms
+ReactHistoryBenchmark.call                                        25   avgt   24      2059.812 ±   16.577   us/op
+ReactHistoryBenchmark.call:gc.alloc.rate                          25   avgt   24      4647.341 ±   37.319  MB/sec
+ReactHistoryBenchmark.call:gc.alloc.rate.norm                     25   avgt   24  10037834.747 ±  221.865    B/op
+ReactHistoryBenchmark.call:gc.count                               25   avgt   24       209.000             counts
+ReactHistoryBenchmark.call:gc.time                                25   avgt   24       133.000                 ms
+
+Benchmark result is saved to <HOME>/workspace/indi/java/agentic-spring-ai-benchmark/results/20260903T065000Z/react/jmh.json

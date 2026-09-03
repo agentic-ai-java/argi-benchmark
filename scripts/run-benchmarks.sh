@@ -21,6 +21,10 @@ record_hardware() {
   fi
 }
 
+record_power() {
+  pmset -g batt | awk '{ gsub(/\(id=[0-9]+\)/, ""); output = output (NR > 1 ? " " : "") $0 } END { print output }'
+}
+
 sanitize_result_file() {
   local result_file="$1"
   if [[ -n "${user_home}" ]]; then
@@ -47,8 +51,14 @@ case "${mode}" in
     graph_include='.*(StateWidthGraphBenchmark|ParallelCrossoverGraphBenchmark|GraphThroughputBenchmark).*'
     react_include='.*(ReactHistoryBenchmark|ReactThroughputBenchmark).*'
     ;;
+  reference-quick)
+    # 提交前趋势检查；正式结论仍以 reference 为准。
+    jmh_options=(-wi 2 -i 3 -w 500ms -r 500ms -f 1)
+    graph_include='.*(StateWidthGraphBenchmark|ParallelCrossoverGraphBenchmark|GraphThroughputBenchmark).*'
+    react_include='.*(ReactHistoryBenchmark|ReactThroughputBenchmark).*'
+    ;;
   *)
-    echo "用法: $0 [quick|full|reference]" >&2
+    echo "用法: $0 [quick|full|reference|reference-quick]" >&2
     exit 2
     ;;
 esac
@@ -64,7 +74,7 @@ mkdir -p "${result_root}/graph" "${result_root}/react"
   echo "os=$(uname -srvmp)"
   record_hardware
   if command -v pmset >/dev/null 2>&1; then
-    echo "power_at_start=$(pmset -g batt | tr '\n' ' ')"
+    echo "power_at_start=$(record_power)"
   fi
   java -version
   mvn -version
@@ -91,7 +101,7 @@ done
 
 {
   if command -v pmset >/dev/null 2>&1; then
-    echo "power_at_end=$(pmset -g batt | tr '\n' ' ')"
+    echo "power_at_end=$(record_power)"
   fi
   echo "completed_at_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 } >>"${result_root}/environment.txt"

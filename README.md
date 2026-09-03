@@ -28,11 +28,14 @@ reports/                              人读性能结论与设备信息
 ./scripts/run-benchmarks.sh quick
 ./scripts/run-benchmarks.sh full
 ./scripts/run-benchmarks.sh reference
+./scripts/run-benchmarks.sh reference-quick
 ./scripts/render-summary.sh results/<run-id>
 ```
 
-快速模式只用于验证。完整模式运行全部场景；`reference` 使用相同的正式采样参数，专门运行状态宽度、并行交叉点、历史长度和多线程吞吐。需要提交或发布性能结论时必须保留生成的 JMH JSON、日志和 `environment.txt`。
+快速模式只用于验证。完整模式运行全部场景；`reference` 使用正式采样参数，专门运行状态宽度、并行交叉点、历史长度和多线程吞吐；`reference-quick` 用于提交前趋势检查。需要提交或发布性能结论时必须保留生成的 JMH JSON、日志和 `environment.txt`。
 
 详细口径见 [性能测试设计](docs/benchmark-design.md)。
 
 当前本机完整结果见 [2026-09-03 性能报告](reports/2026-09-03-full.md)，原始数据位于 `results/20260903T141000Z/`。
+
+面向日常框架开发的扩展结果见 [2026-09-03 开发参考基线](reports/2026-09-03-development-reference.md)，原始数据位于 `results/20260903T065000Z/`。
