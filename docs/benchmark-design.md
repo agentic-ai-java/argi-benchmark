@@ -15,6 +15,8 @@
 
 所有热路径基准使用预构建对象。确定性 `ChatModel` 和本地工具均立即返回，避免网络抖动、限流和模型服务队列掩盖框架成本。
 
+每次 ReAct 调用结束后释放 `MemorySaver` thread，确保测量的是固定长度的独立请求；连续对话历史增长属于另一类容量测试，不能混入固定工作量的微基准。
+
 ## 参考方案如何落地
 
 LangChain4j 当前主分支没有仓库内 JMH 模块。其性能问题 [#4322](https://github.com/langchain4j/langchain4j/issues/4322) 提供了外置 JMH 结果，采用多档数据规模、同机基线、统一时间单位和 speedup；对应 [PR #4323](https://github.com/langchain4j/langchain4j/pull/4323) 只合入产品修复，没有把临时 benchmark 混入功能测试。
@@ -34,7 +36,7 @@ Google ADK Java 的 `TestLlm`/workflow 测试采用预设响应隔离真实模�
 
 | 套件 | 场景 | 参数 | 主要指标 |
 | --- | --- | --- | --- |
-| Graph | 直线图执行 | 节点数 1/10/50 | µs/op、bytes/op、相对直接 Java 基线 |
+| Graph | 直线图执行 | 节点数 1/10/50 | µs/op、bytes/op、相对同等 Map 状态更新链基线 |
 | Graph | 条件自循环 | 迭代 10/100/1000 | µs/op、每迭代增量、bytes/op |
 | Graph | ALL_OF 并行扇出/汇合 | 分支 2/8/32 | µs/op、bytes/op |
 | Graph | 图构建与编译 | 节点数 1/10/50 | µs/op、bytes/op |

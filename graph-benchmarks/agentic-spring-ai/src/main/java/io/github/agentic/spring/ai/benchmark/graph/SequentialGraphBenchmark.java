@@ -21,8 +21,11 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /** 预编译直线图的端到端调用开销。 */
 @BenchmarkMode(Mode.AverageTime)
@@ -39,21 +42,26 @@ public class SequentialGraphBenchmark {
 
 		CompiledGraph graph;
 		RunnableConfig config;
+		List<Function<Map<String, Object>, Map<String, Object>>> directActions;
 
 		@Setup(Level.Trial)
 		public void setup() throws Exception {
 			graph = GraphBenchmarkSupport.sequential(nodeCount);
 			config = RunnableConfig.builder().build();
+			directActions = new ArrayList<>(nodeCount);
+			for (int i = 0; i < nodeCount; i++) {
+				directActions.add(input -> Map.of("value", ((Number) input.get("value")).intValue() + 1));
+			}
 		}
 	}
 
 	@Benchmark
 	public int directJavaBaseline(GraphState state) {
-		int value = 0;
-		for (int i = 0; i < state.nodeCount; i++) {
-			value++;
+		Map<String, Object> data = Map.of("value", 0);
+		for (Function<Map<String, Object>, Map<String, Object>> action : state.directActions) {
+			data = action.apply(data);
 		}
-		return value;
+		return ((Number) data.get("value")).intValue();
 	}
 
 	@Benchmark

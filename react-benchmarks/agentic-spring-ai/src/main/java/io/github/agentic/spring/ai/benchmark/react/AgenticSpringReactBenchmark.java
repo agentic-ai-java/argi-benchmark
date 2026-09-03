@@ -59,12 +59,14 @@ public class AgenticSpringReactBenchmark {
 				.name("fixed_agent")
 				.model(fixedModel)
 				.saver(MemorySaver.builder().build())
+				.releaseThread(true)
 				.build();
 			toolAgent = ReactAgent.builder()
 				.name("tool_agent")
 				.model(toolModel)
 				.methodTools(new LocalTools())
 				.saver(MemorySaver.builder().build())
+				.releaseThread(true)
 				.build();
 		}
 	}
