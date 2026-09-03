@@ -13,8 +13,8 @@ case "${mode}" in
     jmh_options=(-wi 2 -i 3 -w 500ms -r 500ms -f 1)
     ;;
   full)
-    # 完整模式使用源码注解中的 5 次预热、8 次测量和 3 个 fork。
-    jmh_options=()
+    # 显式传参，避免不同 Bash 版本对空数组展开的行为差异。
+    jmh_options=(-wi 5 -i 8 -w 1s -r 1s -f 3)
     ;;
   *)
     echo "用法: $0 [quick|full]" >&2
