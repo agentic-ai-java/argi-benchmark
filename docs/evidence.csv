@@ -1,0 +1,8 @@
+id,type,source,title,version,publish_date,access_date,link,applies_to
+E1,source,local,agentic-spring-ai,c128f0258,,2026-09-03,../agentic-spring-ai,Graph 与 ReAct 被测实现
+E2,repository,GitHub,LangChain4j,d492a4ca,,2026-09-03,https://github.com/langchain4j/langchain4j,参考项目当前文件树与 Agentic 测试结构
+E3,issue,GitHub,InMemoryEmbeddingStore performance benchmark,#4322,2025-12-31,2026-09-03,https://github.com/langchain4j/langchain4j/issues/4322,参数规模矩阵与基线比值设计
+E4,pull_request,GitHub,Method has poor performance InMemoryEmbeddingStore,#4323,2026-01-02,2026-09-03,https://github.com/langchain4j/langchain4j/pull/4323,性能证据与产品代码分离
+E5,repository,GitHub,Google ADK Java,4b058cd1,,2026-09-03,https://github.com/google/adk-java,确定性 TestLlm 与工作流测试结构参考
+E6,tool,Maven Central,LangChain4j agentic metadata,1.19.0-beta29,2026-08-14,2026-09-03,https://repo1.maven.org/maven2/dev/langchain4j/langchain4j-agentic/maven-metadata.xml,调研时版本时效
+E7,tool,Maven Central,Google ADK metadata,1.9.0,2026-08-31,2026-09-03,https://repo1.maven.org/maven2/com/google/adk/google-adk/maven-metadata.xml,调研时版本时效
