@@ -1,12 +1,12 @@
-# agentic-spring-ai benchmark
+# ARGI Benchmark
 
-这是 `agentic-spring-ai` 的独立 JMH 性能测试仓库。Graph 与 ReAct 分模块、分数据目录管理；LangChain4j 和 Google ADK Java 只作为测试设计参考，不参与性能排名。
+This separate Maven project measures Graph and ReAct orchestration using deterministic, framework-neutral chat clients and tools. It does not call remote models or require provider SDKs. Historical September 2026 results retain their original names and are not measurements of the neutral API replacement.
 
 ## 目录
 
 ```text
-graph-benchmarks/agentic-spring-ai/   Graph 调度、循环、并行、编译和 checkpoint
-react-benchmarks/agentic-spring-ai/   单模型回合和一次工具往返
+graph-benchmarks/argi/                Graph scheduling, loops, parallel execution and checkpoints
+react-benchmarks/argi/                Model turns, tool round trips, history and shared throughput
 docs/benchmark-design.md              方法、矩阵、边界和验收标准
 docs/evidence.csv                     调研证据与固定提交
 scripts/                              上游准备、运行和摘要脚本
@@ -18,13 +18,13 @@ reports/                              人读性能结论与设备信息
 
 - JDK 17
 - Maven 3.9+
-- 同级目录中存在 `agentic-spring-ai`；也可设置 `AGENTIC_SPRING_AI_SOURCE`
+- Uses the parent ARGI checkout by default; set `ARGI_SOURCE` to override
 - 可选：`jq`，用于生成 Markdown 摘要
 
 ## 运行
 
 ```shell
-./scripts/prepare-agentic-spring-ai.sh
+./scripts/prepare-argi.sh
 ./scripts/run-benchmarks.sh quick
 ./scripts/run-benchmarks.sh full
 ./scripts/run-benchmarks.sh reference

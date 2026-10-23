@@ -2,7 +2,7 @@
 set -euo pipefail
 
 benchmark_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-agentic_source="${AGENTIC_SPRING_AI_SOURCE:-${benchmark_root}/../agentic-spring-ai}"
+argi_source="${ARGI_SOURCE:-${benchmark_root}/..}"
 mode="${1:-quick}"
 run_id="${RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)}"
 result_root="${benchmark_root}/results/${run_id}"
@@ -70,23 +70,23 @@ mkdir -p "${result_root}/graph" "${result_root}/react"
   echo "mode=${mode}"
   echo "started_at_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "benchmark_commit=$(git -C "${benchmark_root}" rev-parse HEAD 2>/dev/null || echo uncommitted)"
-  echo "agentic_spring_ai_commit=$(git -C "${agentic_source}" rev-parse HEAD)"
+  echo "argi_commit=$(git -C "${argi_source}" rev-parse HEAD)"
   echo "os=$(uname -srvmp)"
   record_hardware
   if command -v pmset >/dev/null 2>&1; then
     echo "power_at_start=$(record_power)"
   fi
   java -version
-  mvn -version
+  "${argi_source}/mvnw" -version
 } >"${result_root}/environment.txt" 2>&1
 
-mvn -B -q -f "${benchmark_root}/pom.xml" verify
+"${argi_source}/mvnw" -B -q -f "${benchmark_root}/pom.xml" verify
 
-java -jar "${benchmark_root}/graph-benchmarks/agentic-spring-ai/target/benchmarks.jar" \
+java -jar "${benchmark_root}/graph-benchmarks/argi/target/benchmarks.jar" \
   "${graph_include}" "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/graph/jmh.json" \
   >"${result_root}/graph/jmh.log"
 
-java -jar "${benchmark_root}/react-benchmarks/agentic-spring-ai/target/benchmarks.jar" \
+java -jar "${benchmark_root}/react-benchmarks/argi/target/benchmarks.jar" \
   "${react_include}" "${jmh_options[@]}" -prof gc -rf json -rff "${result_root}/react/jmh.json" \
   >"${result_root}/react/jmh.log"
 
